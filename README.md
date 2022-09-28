@@ -7,7 +7,7 @@ changes to your new app.
 ## Getting Started
 
 We recommend using [Cloud 9]() to get started, however you may also use your own
-development machine. You will need to adjust the command in install base
+development machine. You will need to adjust the commands to install base
 requirements like jq, npm, AWS CDK, AWS CLI, and Typescript.
 
 
