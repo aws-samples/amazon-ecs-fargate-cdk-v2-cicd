@@ -54,7 +54,7 @@ git clone https://github.com/USER-NAME/amazon-ecs-fargate-cdk-v2-cicd.git
 
 As a security best practice, never hard-code your GitHub token in the code. We will make use of AWS Secrets Manager service to store the GitHub Token and use the CDK APIs to access the token from our code.
 
-#### Create a Person access token in Github. 
+#### Create a Personal access token in Github. 
 Using the Github website, navigate to Settings/Developer Settings/Personal access tokens, create a new token with the following permissions:
 
 * admin:repo_hook
