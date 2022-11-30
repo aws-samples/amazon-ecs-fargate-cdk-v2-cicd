@@ -14,8 +14,8 @@ def hello():
     python_version = platform.python_version()
     aws_platform = os.environ.get('PLATFORM', 'Amazon Web Services')
     #page = 'hello.html'
-    page = 'solid.hello.htlm'
-    return flask.render_template('hello.html',
+    page = 'solid.hello.html'
+    return flask.render_template(page,
                                  platform=aws_platform,
                                  flask_version=flask.__version__,
                                  python_version=python_version,
@@ -28,5 +28,5 @@ if __name__ == '__main__':
     app.run(
         debug=os.getenv('FLASK_DEBUG',False),
         host='0.0.0.0',
-        port=5000
+        port=5010
     )
