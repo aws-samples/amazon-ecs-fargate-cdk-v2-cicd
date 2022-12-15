@@ -9,7 +9,7 @@ app = flask.Flask(__name__)
 
 @app.route('/')
 def hello():
-    name = flask.request.args.get("name", "AnyCompany")
+    name = flask.request.args.get("name", "Flask-demo")
     time = datetime.datetime.now()
     python_version = platform.python_version()
     aws_platform = os.environ.get('PLATFORM', 'Amazon Web Services')
