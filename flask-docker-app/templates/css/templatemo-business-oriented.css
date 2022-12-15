@@ -1,0 +1,422 @@
+/*
+
+TemplateMo 549 Business Oriented
+
+https://templatemo.com/tm-549-business-oriented
+
+*/
+
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 18px;
+    overflow-x: hidden;
+}
+
+a { 
+    transition: all 0.3s ease; 
+    text-decoration: none;
+}
+
+a:hover { text-decoration: none; }
+button:focus { outline: none; }
+
+p {
+    color: #666;
+    line-height: 1.9;
+}
+
+.tm-title-gray { color: #666; }
+
+.tm-hr {
+    width: 240px;
+    border-top: 3px solid #0099FF;
+    margin: 0;
+}
+
+.tm-hr-s { width: 140px; }
+.tm-box-bordered { border: 1px solid #9C9D9E; }
+.container-fluid { max-width: 1480px; }
+
+.tm-logo {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    color: #9C9D9E;
+    width: 400px;
+    height: 200px;
+    padding: 50px 40px;
+}
+
+@media (max-width: 500px) {
+    .tm-logo {
+        left: 50%;
+        margin-left: -200px;
+    }
+}
+
+.tm-logo-text { font-size: 2rem; }
+#parallax-1 { min-height: 690px; }
+#parallax-2 { min-height: 590px; }
+#parallax-3 { min-height: 400px; }
+
+.parallax-window {    
+    background: transparent;
+    position: relative;
+}
+
+#tm-main-nav {    
+    padding: 0;
+    z-index: 1000;
+}
+
+.tm-nav-container-outer {
+    margin-top: 8px;
+    border-top: 1px solid #CCCDCE;
+    border-bottom: 1px solid #CCCDCE;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    color: #6A6B6C;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    text-align: center;
+    padding: 30px 49px;
+    margin-right: 50px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.nav-item.active .nav-link,
+.nav-item:hover .nav-link {
+    color: #0099FF;
+    border-top: 8px solid #0099FF;
+    border-bottom: 8px solid #0099FF;
+}
+
+.tm-intro { max-width: 580px; }
+h4 { font-size: 1.5rem; }
+.tm-text-primary { color: #0099FF; }
+.tm-text-primary-link { color: #0099FF; }
+.tm-text-primary-link:hover { color: rgb(15, 133, 211); }
+
+.tm-strategy-box { 
+    display: flex; 
+    align-items: flex-start;
+}
+
+.tm-services-box {
+    display: flex;
+    align-items: flex-start;
+}
+
+.tm-strategy-img { margin-right: 30px; }
+.tm-services-img { margin-right: 40px; }
+.tm-strategy-text { max-width: 480px; }
+.mb-6 { margin-bottom: 120px; }
+.mb-7 { margin-bottom: 140px; }
+.mb-8 { margin-bottom: 80px; }
+.mb-60 { margin-bottom: 60px; }
+.mb-10 { margin-bottom: 100px; }
+.mb-25 { margin-bottom: 250px; }
+.mt-6 { margin-top: 90px; }
+.mt-7 { margin-top: 140px; }
+.tm-px-3 {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+@media (min-width: 992px) {
+    .pr-lg-5 { padding-right: 70px!important; }
+}
+
+.tm-text-gray { color: #666; }
+.tm-bg-gray { background-color: #F2F2F2; }
+.tm-bg-gray-dark { background-color: #EDEEEF; }
+.tm-bg-white { background-color: rgba(255,255,255,0.6); }
+.tm-bg-black-transparent { background-color: rgba(0,0,0,0.5 ); }
+.tm-box { padding: 50px; }
+.tm-box-2 { padding: 50px; max-width: 500px; }
+.tm-box-3 { padding: 70px 35px;}
+i { color: #ABC; }
+
+.tm-overlay {
+    max-width: 660px;
+    padding: 75px 70px;
+}
+
+.parallax-window-2 {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    padding: 15px 50px;
+    border-radius: 0;
+    font-size: 1.2rem;
+}
+
+.btn-primary {
+    background-color: #0099FF;
+    border-color: #0099FF;
+}
+
+.btn-primary:hover {
+    background-color: #2f80d0;
+    border-color: #2f80d0;
+}
+
+footer {
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.tm-link-primary { color: #0099FF; }
+.tm-link-primary:hover { color: #2f80d0; }
+.fa-15x { font-size: 1.5em; }
+
+.tm-social-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+.tm-social-icon-2 {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    color: #fff;
+}
+
+.tm-social-link i { transition: all 0.3s ease; }
+.tm-social-link:hover i { color: #0099FF; }
+
+/* Hover effect */
+.tm-about-person-layout {
+    margin-bottom: 0;  
+    width: 100%;
+    height: auto;  
+    max-width: 460px;    
+}
+
+.tm-about-person {
+	position: relative;
+    overflow: hidden;
+    max-height: 420px;     
+	background: #3085a3;
+	text-align: center;
+	cursor: pointer;
+}
+
+.tm-about-person img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	max-width: 100%;
+	opacity: 0.8;
+}
+
+.tm-about-person figcaption {
+	padding: 15px;
+	color: #fff;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.tm-about-person figcaption::before,
+.tm-about-person figcaption::after {
+	pointer-events: none;
+}
+
+.tm-about-person figcaption,
+.tm-about-person figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.tm-about-person figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.tm-about-person h2 { font-weight: 300; }
+.tm-about-person h2 span { font-weight: 600; }
+
+.tm-about-person h2,
+.tm-about-person p {
+	margin: 0;
+}
+
+.tm-about-person p {
+	letter-spacing: 1px;
+    font-size: 68.5%;
+    color: #fff;
+}
+
+/*---------------*/
+/***** Milo *****/
+/*---------------*/
+
+figure.effect-milo { background: #2e5d5a; }
+
+figure.effect-milo img {
+	max-width: none;
+	width: -webkit-calc(100% + 60px);
+	width: calc(100% + 60px);
+	opacity: 1;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(-30px,0,0) scale(1.12);
+	transform: translate3d(-30px,0,0) scale(1.12);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+figure.effect-milo:hover img {
+	opacity: 0.5;
+	-webkit-transform: translate3d(0,0,0) scale(1);
+	transform: translate3d(0,0,0) scale(1);
+}
+
+figure.effect-milo h2 {
+    font-size: 1.2rem;
+	position: absolute;
+    left: 0;
+    right: 0;
+	bottom: 0;
+    padding: 20px;
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(45, 92, 89, 0.5));
+}
+
+figure.effect-milo p {
+	padding: 0 10px 0 0;
+	border-right: 1px solid #fff;
+	text-align: right;
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(-40px,0,0);
+	transform: translate3d(-40px,0,0);
+}
+
+figure.effect-milo:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+/* Contact */
+.mapouter{
+    position:relative;
+    text-align:right;
+    height:520px;
+    width:100%;
+}
+
+.gmap_canvas {
+    overflow:hidden;
+    background:none!important;
+    height:520px;
+    width:100%;
+}
+
+.tm-contact-form-box { max-width: 485px; }
+.tm-address-box { max-width: 860px; }
+.form-group { margin-bottom: 40px; }
+
+.form-control {
+  font-size: 1em;
+  border-radius: 0;
+  padding: 14px 20px;
+  height: auto;
+}
+
+select.form-control { height: 60px; }
+
+select:not([multiple]) {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-position: right 15px center;
+  background-repeat: no-repeat;
+  background-image: url('../img/select-arrow.png');
+  padding: 14px 20px;
+  padding-right: 20px;
+  color: #666;
+}
+
+#contactSelect { border-radius: 0 }
+.tm-address-text { max-width: 650px; }
+
+@media (max-width: 1199px) {
+    .tm-box-3 { margin-bottom: 2rem; }
+}
+
+@media (min-width: 992px) and (max-width: 1100px) {
+    .tm-services-img { width: 220px; }
+}
+
+@media (max-width: 992px) {
+    .navbar-toggler {
+        position: fixed;        
+        right: 15px;
+        top: 10px;        
+        background-color: white;
+        padding: 10px 16px;
+        font-size: 1.5rem;
+        border-radius: 0;
+    }
+
+    .navbar-toggler i { color: #0099FF; }
+    
+    .navbar-collapse {
+        position: fixed;
+        right: 15px;
+        top: 56px;
+        background-color: white;
+    }
+
+    .navbar-expand-lg .navbar-nav .nav-link {
+        margin-right: 0;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        padding: 8px 25px; 
+    }
+
+    .tm-box { margin-bottom: 30px; }
+    .tm-box-s { max-width: 480px; }
+}
+
+@media (max-width: 565px) {
+    .tm-services-box {
+        flex-direction: column;
+    }
+
+    .tm-services-img {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 430px) {
+    .tm-strategy-box { flex-direction: column; }
+
+    .tm-strategy-img {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+}
