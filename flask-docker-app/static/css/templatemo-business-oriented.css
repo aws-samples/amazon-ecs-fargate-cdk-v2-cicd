@@ -46,7 +46,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #333;
+    background-color: #0372ef;
     color: #9C9D9E;
     width: 400px;
     height: 200px;
@@ -116,7 +116,7 @@ h4 { font-size: 1.5rem; }
     align-items: flex-start;
 }
 
-.tm-strategy-img { margin-right: 30px; }
+.tm-strategy-img { margin-right: 30px; height: 177px; width: 177px; }
 .tm-services-img { margin-right: 40px; }
 .tm-strategy-text { max-width: 480px; }
 .mb-6 { margin-bottom: 120px; }
