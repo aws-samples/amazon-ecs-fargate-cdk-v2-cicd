@@ -61,7 +61,7 @@ p {
 }
 
 .tm-logo-text { font-size: 2rem; }
-/* #parallax-1 { min-height: 90px; } */
+#parallax-1 { min-height: 690px; }
 #parallax-2 { min-height: 590px; }
 #parallax-3 { min-height: 400px; }
 
