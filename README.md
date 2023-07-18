@@ -107,10 +107,10 @@ aws codebuild list-source-credentials
 
 ### Launch infrastructure with AWS Cloud Developement Kit (CDK)
 
-Navigate to the `cdk-v2` directory and run the following commands:
+Navigate to the `cdk-v2` directory of the cloned repo and run the following commands:
 
 ```bash
-cd cdk-v2
+cd amazon-ecs-fargate-cdk-v2-cicd/cdk-v2
 cdk init
 npm install
 npm run build
