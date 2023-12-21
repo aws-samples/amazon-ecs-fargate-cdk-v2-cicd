@@ -14,20 +14,20 @@ export class EcsCdkStack extends cdk.Stack {
     super(scope, id, props);
 
     const githubUserName = new cdk.CfnParameter(this, "githubUserName", {
-        type: "String",
-        description: "Github username for source code repository"
+      type: "String",
+      description: "Github username for source code repository"
     })
 
     const githubRepository = new cdk.CfnParameter(this, "githubRespository", {
-        type: "String",
-        description: "Github source code repository",
-        default: "amazon-ecs-fargate-cdk-v2-cicd" 
+      type: "String",
+      description: "Github source code repository",
+      default: "amazon-ecs-fargate-cdk-v2-cicd"
     })
 
     const githubPersonalTokenSecretName = new cdk.CfnParameter(this, "githubPersonalTokenSecretName", {
-        type: "String",
-        description: "The name of the AWS Secrets Manager Secret which holds the GitHub Personal Access Token for this project.",
-        default: "/aws-samples/amazon-ecs-fargate-cdk-v2-cicd/github/personal_access_token" 
+      type: "String",
+      description: "The name of the AWS Secrets Manager Secret which holds the GitHub Personal Access Token for this project.",
+      default: "/aws-samples/amazon-ecs-fargate-cdk-v2-cicd/github/personal_access_token"
     })
     //default: `${this.stackName}`
 
@@ -37,10 +37,18 @@ export class EcsCdkStack extends cdk.Stack {
      * create a new vpc with single nat gateway
      */
     const vpc = new ec2.Vpc(this, 'ecs-cdk-vpc', {
-      cidr: '10.0.0.0/16',
+      subnetConfiguration: [
+        {
+          cidrMask: 24,
+          name: 'public',
+          subnetType: ec2.SubnetType.PUBLIC,
+        },
+        // Add more subnet configurations as needed for private and isolated subnets
+      ],
       natGateways: 1,
-      maxAzs: 3  /* does a sample need 3 az's? */
+      maxAzs: 3 /* does a sample need 3 az's? */
     });
+
 
     const clusteradmin = new iam.Role(this, 'adminrole', {
       assumedBy: new iam.AccountRootPrincipal()
@@ -63,17 +71,17 @@ export class EcsCdkStack extends cdk.Stack {
 
     // ***ecs contructs***
 
-    const executionRolePolicy =  new iam.PolicyStatement({
+    const executionRolePolicy = new iam.PolicyStatement({
       effect: iam.Effect.ALLOW,
       resources: ['*'],
       actions: [
-                "ecr:getauthorizationtoken",
-                "ecr:batchchecklayeravailability",
-                "ecr:getdownloadurlforlayer",
-                "ecr:batchgetimage",
-                "logs:createlogstream",
-                "logs:putlogevents"
-            ]
+        "ecr:getauthorizationtoken",
+        "ecr:batchchecklayeravailability",
+        "ecr:getdownloadurlforlayer",
+        "ecr:batchgetimage",
+        "logs:createlogstream",
+        "logs:putlogevents"
+      ]
     });
 
     const taskDef = new ecs.FargateTaskDefinition(this, "ecs-taskdef", {
@@ -253,12 +261,12 @@ export class EcsCdkStack extends cdk.Stack {
         "ecr:batchchecklayeravailability",
         "ecr:batchgetimage",
         "ecr:getdownloadurlforlayer"
-        ],
+      ],
       resources: [`${cluster.clusterArn}`],
     }));
 
 
-    new cdk.CfnOutput(this, "image", { value: ecrRepo.repositoryUri+":latest"} )
+    new cdk.CfnOutput(this, "image", { value: ecrRepo.repositoryUri + ":latest" })
     new cdk.CfnOutput(this, 'loadbalancerdns', { value: fargateService.loadBalancer.loadBalancerDnsName });
   }
 
